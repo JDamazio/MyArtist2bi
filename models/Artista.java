@@ -13,13 +13,11 @@ public class Artista extends Pessoa{
     }
 
     @Override
-    public String paraTexto() {
+    public String toString() {
         return
             "Nome: "+getNome()+
             " | CPF: "+getCpf()+
             " | Serviço: "+getServico();
     }
 
-    public void add(Artista artista) {
-    }
 }

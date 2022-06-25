@@ -13,10 +13,10 @@ public class Cliente extends Pessoa{
     }
 
     @Override
-    public String paraTexto() {
-        return 
-            "Nome: "+ getNome()+
-            " | CPF: "+ getCpf()+
-            " | Cel: "+ getCel();
+    public String toString() {
+        return            
+        "Nome: "+ getNome()+
+        " | CPF: "+ getCpf()+
+        " | Cel: "+ getCel();
     }
 }

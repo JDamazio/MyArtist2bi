@@ -10,21 +10,21 @@ public class Agendamento {
     private Produto produto;
     public String dataAgendada; 
     public  Date dataConvertida;
+    private double valor;
 
     public Date getDataConvertida(Date dataConvertida){
         return dataConvertida;
     }
     public void setDataConvertida(String dataAgendada) {
-        try{
-            // converte a string para o formato Date formatando para o padrao brasileiro
-        Date dataConvertida = new SimpleDateFormat("dd/MM/yyyy").parse(dataAgendada);  
-        this.dataConvertida = dataConvertida;
-    } catch (java.text.ParseException e) {
-        e.printStackTrace();
-    }
+            try{
+                // converte a string para o formato Date formatando para o padrao brasileiro
+            Date dataConvertida = new SimpleDateFormat("dd/MM/yyyy").parse(dataAgendada);  
+            this.dataConvertida = dataConvertida;
+        } catch (java.text.ParseException e) {
+            e.printStackTrace();
+        }
     }
 
-    private double valor;
     
     public String getDataAgendada() {
         return dataAgendada;
@@ -60,6 +60,16 @@ public class Agendamento {
     }
     public void setValor(double valor) {
         this.valor = valor;
+    }
+
+    @Override
+    public String toString() {
+        return 
+            "Cliente: " + cliente.getNome() +
+            " | Artista: " + artista.getNome() + 
+            " | Produto: " + produto.getTipo() +
+            " | Tatuagem: " + produto.getTipo()+
+            " | Data: "+ getDataAgendada();
     }
     
 }

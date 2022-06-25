@@ -4,8 +4,6 @@ public class Produto {
     
     private String tipo;
     private Double preco;
-    private int quantidade;
-    private String local;
     
     public String getTipo() {
         return tipo;
@@ -19,17 +17,11 @@ public class Produto {
     public void setPreco(Double preco) {
         this.preco = preco;
     }
-    public int getQuantidade() {
-        return quantidade;
+
+    @Override
+    public String toString() {
+        return 
+        "Nome: " + tipo + 
+        " | Preço: " + preco;
     }
-    public void setQuantidade(int quantidade) {
-        this.quantidade = quantidade;
-    }
-    public String getLocal() {
-        return local;
-    }
-    public void setLocal(String local) {
-        this.local = local;
-    }
-    
 }

@@ -19,7 +19,7 @@ public class Principal {
             System.out.println("\t| 5 - Cadastrar Produto\t|");
             System.out.println("\t| 6 - Listar Produtos\t|");
             System.out.println("\t| 7 - Agendar\t\t|");
-            System.out.println("\t| 8 - Agendamentos\t|");
+            System.out.println("\t| 8 - Agendados\t\t|");
             System.out.println("\t|=======================|");
             System.out.println("\t| 9 - Editar\t\t|\n");
             
@@ -27,13 +27,37 @@ public class Principal {
 
             switch (opcao) {
                 case 1:
-                CadastrarClientes cadastrarClientes = new CadastrarClientes();
+                CadastrarCliente cadastrarClientes = new CadastrarCliente();
                 cadastrarClientes.renderizar();
                 break;
                 case 2:
                 ListarClientes listarClientes = new ListarClientes();
                 listarClientes.renderizar();
                 break;
+                case 3:
+                CadastrarArtista cadastrarArtista = new CadastrarArtista();
+                cadastrarArtista.renderizar();
+                break;
+                case 4:
+                ListarArtistas listarArtistas = new ListarArtistas();
+                listarArtistas.renderizar();
+                break;
+                case 5:
+                CadastrarProduto cadastrarProduto = new CadastrarProduto();
+                cadastrarProduto.renderizar();
+                break;
+                case 6:
+                ListarProdutos listarProdutos = new ListarProdutos();
+                listarProdutos.renderizar();
+                break;
+                case 7:
+                Agendar agendar = new Agendar();
+                agendar.renderizar();
+                break;
+                case 8:
+                Agendamentos agendamentos = new Agendamentos();
+                agendamentos.renderizar();
+
             }
 
 

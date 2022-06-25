@@ -5,7 +5,7 @@ import models.Cliente;
 import utils.Console;
 import views.contracts.IViews;
 
-public class CadastrarClientes implements IViews{
+public class CadastrarCliente implements IViews{
 
     @Override
     public void renderizar(){
