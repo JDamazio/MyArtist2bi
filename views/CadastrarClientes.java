@@ -1,0 +1,26 @@
+package views;
+
+import controllers.ClienteController;
+import models.Cliente;
+import utils.Console;
+import views.contracts.IViews;
+
+public class CadastrarClientes implements IViews{
+
+    @Override
+    public void renderizar(){
+        Cliente cliente = new Cliente();
+        ClienteController clienteController = new ClienteController();
+
+        System.out.println("\n == CADASTRO DE CLIENTES == \n");
+        cliente.setNome(Console.readString("Digite o nome do cliente: "));
+        cliente.setCpf(Console.readString("Digite o CPF do cliente: "));
+        cliente.setCel(Console.readString("Digite seu celular:"));
+        
+        if(clienteController.cadastrar(cliente)){
+            System.out.println("\n Cliente cadastrado com SUCESSO !! \n");
+        }
+        
+    }
+    
+}
