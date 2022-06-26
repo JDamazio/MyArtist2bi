@@ -27,40 +27,38 @@ public class Principal {
 
             switch (opcao) {
                 case 1:
-                CadastrarCliente cadastrarClientes = new CadastrarCliente();
-                cadastrarClientes.renderizar();
-                break;
+                    CadastrarCliente cadastrarClientes = new CadastrarCliente();
+                    cadastrarClientes.renderizar();
+                    break;
                 case 2:
-                ListarClientes listarClientes = new ListarClientes();
-                listarClientes.renderizar();
-                break;
+                    ListarClientes listarClientes = new ListarClientes();
+                    listarClientes.renderizar();
+                    break;
                 case 3:
-                CadastrarArtista cadastrarArtista = new CadastrarArtista();
-                cadastrarArtista.renderizar();
-                break;
+                    CadastrarArtista cadastrarArtista = new CadastrarArtista();
+                    cadastrarArtista.renderizar();
+                    break;
                 case 4:
-                ListarArtistas listarArtistas = new ListarArtistas();
-                listarArtistas.renderizar();
-                break;
+                    ListarArtistas listarArtistas = new ListarArtistas();
+                    listarArtistas.renderizar();
+                    break;
                 case 5:
-                CadastrarProduto cadastrarProduto = new CadastrarProduto();
-                cadastrarProduto.renderizar();
-                break;
+                    CadastrarProduto cadastrarProduto = new CadastrarProduto();
+                    cadastrarProduto.renderizar();
+                    break;
                 case 6:
-                ListarProdutos listarProdutos = new ListarProdutos();
-                listarProdutos.renderizar();
-                break;
+                    ListarProdutos listarProdutos = new ListarProdutos();
+                    listarProdutos.renderizar();
+                    break;
                 case 7:
-                Agendar agendar = new Agendar();
-                agendar.renderizar();
-                break;
+                    Agendar agendar = new Agendar();
+                    agendar.renderizar();
+                    break;
                 case 8:
-                Agendamentos agendamentos = new Agendamentos();
-                agendamentos.renderizar();
-
+                    Agendamentos agendamentos = new Agendamentos();
+                    agendamentos.renderizar();
+                    break;
             }
-
-
         }   while (opcao !=0);
     }
 }

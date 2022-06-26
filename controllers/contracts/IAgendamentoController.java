@@ -6,7 +6,9 @@ import models.Agendamento;
 
 public interface IAgendamentoController {
 
-    void cadastrar(Agendamento agendamento);
+    boolean cadastrar(Agendamento agendamento);
+
+    Agendamento buscarData(String dataAgendada);
 
     ArrayList<Agendamento> listar();
 }

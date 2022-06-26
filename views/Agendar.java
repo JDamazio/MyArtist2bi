@@ -42,10 +42,15 @@ public class Agendar implements IViews{
                 if(produto != null){
                     agendamento.setProduto(produto);
 
-                    String dataMarcada = Console.readString("Informe o dia: ");
-                    agendamento.setDataAgendada(dataMarcada);
-                    agendamentoController.cadastrar(agendamento);
-                    System.out.println("Tatuagem marcada!!");
+                    String dataMarcada = Console.readString("Informe a data: ");
+                    Agendamento agendar = agendamentoController.buscarData(dataMarcada);
+                    if(agendar != null){
+                        agendamento.setDataAgendada(dataMarcada);
+                        agendamentoController.cadastrar(agendamento);
+                        System.out.println("Tatuagem marcada!!");
+                    }else{
+                        System.out.println("Data Indisponível");
+                    }
                 }else{
                     System.out.println("Produto não encontrado!");
                 }

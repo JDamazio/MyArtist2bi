@@ -1,7 +1,5 @@
 package views;
 
-import java.sql.ClientInfoStatus;
-
 import controllers.ArtistaController;
 import models.Artista;
 import views.contracts.IViews;
