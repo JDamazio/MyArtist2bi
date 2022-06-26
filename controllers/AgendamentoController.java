@@ -8,30 +8,39 @@ import models.Agendamento;
 public class AgendamentoController implements IAgendamentoController{
     
     private static ArrayList<Agendamento> agendamentos = new ArrayList<Agendamento>();
+    
 
-    @Override
-    public boolean cadastrar(Agendamento agendamento) {
-        if (buscarData(agendamento.getDataAgendada()) == null){
+    public boolean cadastrar(Agendamento agendamento){
+        if (verAgendamento(agendamento.getDataAgendada()) == null) {
             agendamentos.add(agendamento);
             return true;
         }
         return false;
     }
 
-    @Override
-    public ArrayList<Agendamento> listar() {
-        return agendamentos;
-    }
-
 
     @Override
-    public Agendamento buscarData(String dataAgendada) {
-        for (Agendamento agendamentoDisponivel : agendamentos){
-            if(agendamentoDisponivel.getDataAgendada() != dataAgendada){
-                return agendamentoDisponivel;
+    public Agendamento verAgendamento(String dataAgendada) {
+        for (Agendamento estaAgendado : agendamentos){
+            if(estaAgendado.getDataAgendada().equals(dataAgendada)){
+                return estaAgendado;
             }
         }
         return null;
     }
+
+    @Override
+    public boolean estaAgendado(Agendamento agendamento){
+        if(verAgendamento(agendamento.getDataAgendada())==null){
+            return true;
+        }
+        return false;
+    }
+
+
+	@Override
+	public ArrayList<Agendamento> listar() {
+		return agendamentos;
+	}
 
 }

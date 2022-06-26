@@ -8,7 +8,11 @@ public interface IAgendamentoController {
 
     boolean cadastrar(Agendamento agendamento);
 
-    Agendamento buscarData(String dataAgendada);
+    // Agendamento buscarData(String dataAgendada);
+
+    Agendamento verAgendamento(String dataAgendada);
+
+    boolean estaAgendado(Agendamento agendamento);
 
     ArrayList<Agendamento> listar();
 }

@@ -9,10 +9,11 @@ public class Agendamento {
     private Artista artista;
     private Produto produto;
     public String dataAgendada; 
-    public  Date dataConvertida;
     private double valor;
+    private Date dataConvertida;
 
-    public Date getDataConvertida(Date dataConvertida){
+    
+    public Date getDataConvertida(String dataNasc){
         return dataConvertida;
     }
     public void setDataConvertida(String dataAgendada) {
@@ -24,8 +25,6 @@ public class Agendamento {
             e.printStackTrace();
         }
     }
-
-    
     public String getDataAgendada() {
         return dataAgendada;
     }

@@ -1,11 +1,16 @@
 package models;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class Pessoa {
     
     private String nome;
     private String cpf;
     private String sexo;
-    private int dataNasc;
+    private String dataNasc;
+
+
 
     public String getNome() {
         return nome;
@@ -25,10 +30,10 @@ public class Pessoa {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
-    public int getDataNasc() {
+    public String getDataNasc() {
         return dataNasc;
     }
-    public void setDataNasc(int dataNasc) {
+    public void setDataNasc(String dataNasc) {
         this.dataNasc = dataNasc;
     }
 
