@@ -43,4 +43,9 @@ public class ArtistaController implements IArtistaController {
 		int index = artistas.indexOf(artista);
 		if(index > 0) artistas.add(index, artista);
 	}
+
+    public Boolean exists(Artista a){
+		return artistas.contains(a);
+	}
+
 }

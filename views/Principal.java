@@ -6,7 +6,7 @@ public class Principal {
     
     public static void main (String[] args) {
 
-        int opcao = 0, opcaoEditar;
+        int opcao = 0;
         do{
             System.out.println("\n\n\n\t  ====  My artist  ==== \n");
 
@@ -23,9 +23,10 @@ public class Principal {
             System.out.println("\t| 9 - Avaliar\t\t|");
             System.out.println("\t| 10 - Listar Avaliações|");
             System.out.println("\t| 11 - Encomendar\t|");
-            System.out.println("\t| 10 - Listar encomendas|");
+            System.out.println("\t| 12 - Listar encomendas|");
             System.out.println("\t|=======================|");
-            System.out.println("\t|  - Editar\t\t|\n");
+            System.out.println("\t| 13 - Editar artista\n");
+            System.out.println("\t| 14 - Deletar artista\n");
             
             opcao = Console.readInt("\t Digite uma opção: ");
 
@@ -75,6 +76,22 @@ public class Principal {
                     cadastrarEncomenda.renderizar();
                     break;
                 case 12:
+                    ListarEncomenda listarEncomenda = new ListarEncomenda();
+                    listarEncomenda.renderizar();
+                    break;
+                case 13:
+                    EditarArtista editarArtista = new EditarArtista();
+                    editarArtista.renderizar();
+                    break;
+                case 14:
+                    DeletarArtista deletarArtista = new DeletarArtista();
+                    deletarArtista.renderizar();
+                    break;
+                case 0:
+                    System.out.println("\n -- SAINDO -- \n");
+                    break;
+                default:
+                    System.out.println("\n --OPÇÃO INVÁLIDA -- \n");
                     break;
             }
         }   while (opcao !=0);
