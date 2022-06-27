@@ -20,8 +20,12 @@ public class Principal {
             System.out.println("\t| 6 - Listar Produtos\t|");
             System.out.println("\t| 7 - Agendar\t\t|");
             System.out.println("\t| 8 - Agendados\t\t|");
+            System.out.println("\t| 9 - Avaliar\t\t|");
+            System.out.println("\t| 10 - Listar Avaliações|");
+            System.out.println("\t| 11 - Encomendar\t|");
+            System.out.println("\t| 10 - Listar encomendas|");
             System.out.println("\t|=======================|");
-            System.out.println("\t| 9 - Editar\t\t|\n");
+            System.out.println("\t|  - Editar\t\t|\n");
             
             opcao = Console.readInt("\t Digite uma opção: ");
 
@@ -57,6 +61,20 @@ public class Principal {
                 case 8:
                     Agendamentos agendamentos = new Agendamentos();
                     agendamentos.renderizar();
+                    break;
+                case 9:
+                    CadastrarAvaliacao cadastrarAvaliacao = new CadastrarAvaliacao();
+                    cadastrarAvaliacao.renderizar();
+                    break;
+                case 10:
+                    ListarAvaliacoes listarAvaliacoes = new ListarAvaliacoes();
+                    listarAvaliacoes.renderizar();
+                    break;
+                case 11:
+                    CadastrarEncomenda cadastrarEncomenda = new CadastrarEncomenda();
+                    cadastrarEncomenda.renderizar();
+                    break;
+                case 12:
                     break;
             }
         }   while (opcao !=0);

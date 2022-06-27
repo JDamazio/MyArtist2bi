@@ -2,12 +2,14 @@ package controllers;
 
 import java.util.ArrayList;
 
+
 import controllers.contracts.IClienteController;
 import models.Cliente;
 
 public class ClienteController implements IClienteController{
 
     private static ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+
 
     @Override
     public boolean cadastrar(Cliente cliente){

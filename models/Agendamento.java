@@ -1,8 +1,5 @@
 package models;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 public class Agendamento {
     
     private Cliente cliente;
@@ -10,21 +7,8 @@ public class Agendamento {
     private Produto produto;
     public String dataAgendada; 
     private double valor;
-    private Date dataConvertida;
-
     
-    public Date getDataConvertida(String dataNasc){
-        return dataConvertida;
-    }
-    public void setDataConvertida(String dataAgendada) {
-            try{
-                // converte a string para o formato Date formatando para o padrao brasileiro
-            Date dataConvertida = new SimpleDateFormat("dd/MM/yyyy").parse(dataAgendada);  
-            this.dataConvertida = dataConvertida;
-        } catch (java.text.ParseException e) {
-            e.printStackTrace();
-        }
-    }
+
     public String getDataAgendada() {
         return dataAgendada;
     }

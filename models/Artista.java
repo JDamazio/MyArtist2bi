@@ -3,8 +3,18 @@ package models;
 public class Artista extends Pessoa{
     
     private String servico;
+    private String sexo;
 
-    public String getServico() {
+
+    public String getSexo() {
+		return sexo;
+	}
+
+	public void setSexo(String sexo) {
+		this.sexo = sexo;
+	}
+
+	public String getServico() {
         return servico;
     }
 

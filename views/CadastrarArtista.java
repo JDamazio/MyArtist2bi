@@ -15,7 +15,6 @@ public class CadastrarArtista implements IViews{
         System.out.println("\n == CADASTRO DE ARTISTA == \n");
         artista.setNome(Console.readString("Digite o nome do artista:"));
         artista.setCpf(Console.readString("Digite o cpf do artista:"));
-        artista.setDataNasc(Console.readString("Digite a data de nascimento:"));
         artista.setSexo(Console.readString("Digite o sexo[masc/fem]:"));
         artista.setServico(Console.readString("Digite sua área de atuação:"));
 
